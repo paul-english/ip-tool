@@ -1,0 +1,108 @@
+<head>
+  <title>ip-addresses</title>
+</head>
+
+<body>
+  <div class="container">
+    {{> form}}
+  </div>
+</body>
+
+<template name="form">
+  <form class="form-horizontal">
+    <div class="control-group">
+      <label class="control-label">IP Address</label>
+      <div class="controls">
+	{{> ip_address}}
+      </div>
+    </div>
+    <div class="control-group">
+      <label class="control-label">Octets</label>
+      <div class="controls">
+	{{> first_octet}}
+	.
+	{{> second_octet}}
+	.
+	{{> third_octet}}
+	.
+	{{> fourth_octet}}
+      </div>
+    </div>
+    <div class="control-group">
+      <label class="control-label">Binary Octets</label>
+      <div class="controls">
+	{{> first_binary_octet}}
+	.
+	{{> second_binary_octet}}
+	.
+	{{> third_binary_octet}}
+	.
+	{{> fourth_binary_octet}}
+      </div>
+    </div>
+    <div class="control-group">
+      <label class="control-label">Class</label>
+      <div class="controls">
+	<input id="ip_class" disabled="disabled"
+	value="{{ip_class}}" />
+      </div>
+    </div>
+    <div class="control-group">
+      <label class="control-label">Subnet Mask</label>
+      <div class="controls">
+	<input id="subnet_mask"	value="{{subnet_mask}}" />
+      </div>
+    </div>
+    <div class="control-group">
+      <label class="control-label">CIDR Notation</label>
+      <div class="controls">
+	<input id="cidr_notation" value="{{cidr_notation}}"
+	disabled="disabled" />
+      </div>
+    </div>
+    <div class="control-group">
+      <label class="control-label">Default Network</label>
+      <div class="controls">
+	<input id="default_network" disabled="disabled"
+	value="{{default_network}}" />
+      </div>
+    </div>
+    <div class="control-group">
+      <label class="control-label">Public/Private</label>
+      <div class="controls">
+	<input id="public_private" disabled="disabled"
+	value="{{public_private}}" />
+      </div>
+    </div>
+  </form>
+</template>
+
+<template name="ip_address">
+  <input id="ip-address" type="text" value="{{value}}" class="input-medium" />
+</template>
+
+<template name="first_octet">
+  <input id="first-octet" type="text" value="{{value}}" class="span1" />
+</template>
+<template name="second_octet">
+  <input id="second-octet" type="text" value="{{value}}" class="span1" />
+</template>
+<template name="third_octet">
+  <input id="third-octet" type="text" value="{{value}}" class="span1" />
+</template>
+<template name="fourth_octet">
+  <input id="fourth-octet" type="text" value="{{value}}" class="span1" />
+</template>
+
+<template name="first_binary_octet">
+  <input id="first-binary-octet" type="text" value="{{value}}" class="span2" />
+</template>
+<template name="second_binary_octet">
+  <input id="second-binary-octet" type="text" value="{{value}}" class="span2" />
+</template>
+<template name="third_binary_octet">
+  <input id="third-binary-octet" type="text" value="{{value}}" class="span2" />
+</template>
+<template name="fourth_binary_octet">
+  <input id="fourth-binary-octet" type="text" value="{{value}}" class="span2" />
+</template>
